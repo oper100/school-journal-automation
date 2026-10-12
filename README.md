@@ -94,9 +94,12 @@ lines as features landed, into per-command modules earlier.
 
 ## Usage
 
+Requires Python 3.10+ and Google Chrome on Windows (the default `attach`
+mode looks for `chrome.exe` in the usual install folders).
+
 ```bash
 pip install -e .
-python -m playwright install chromium
+python -m playwright install chromium   # only needed for the diagnostic `--browser launch`
 
 python -m nzua --help           # full guide, in Ukrainian
 python -m nzua add-columns --month 2026-09 --dry-run
