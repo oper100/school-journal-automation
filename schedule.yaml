@@ -1,0 +1,46 @@
+# Розклад уроків для автоматичного створення стовпчиків у журналі nz.ua.
+#
+# day: mon | tue | wed | thu | fri
+# lesson: номер уроку в розкладі дня
+# cabinet: необов'язкове. Якщо не вказано, кабінет дорівнює назві класу.
+
+lesson_type: Поточна
+repeat: weekly_until_month_end
+
+subjects:
+  Фізика:
+    8-Б:  [{day: thu, lesson: 7}, {day: fri, lesson: 7}]
+    9-А:  [{day: mon, lesson: 3}, {day: thu, lesson: 2}, {day: fri, lesson: 2}]
+    9-Б:  [{day: mon, lesson: 6}, {day: tue, lesson: 7}, {day: thu, lesson: 3}]
+    9-В:  [{day: tue, lesson: 2}, {day: tue, lesson: 4}, {day: thu, lesson: 4}]
+    10-А: [{day: mon, lesson: 4}, {day: tue, lesson: 5}, {day: fri, lesson: 5}]
+    10-Б: [{day: mon, lesson: 1}, {day: tue, lesson: 1}, {day: thu, lesson: 1}]
+    11-А: [{day: mon, lesson: 2}, {day: fri, lesson: 1}, {day: fri, lesson: 4}]
+    11-Б: [{day: thu, lesson: 6}, {day: fri, lesson: 3}, {day: fri, lesson: 6}]
+  Астрономія:
+    11-А: [{day: tue, lesson: 3}]
+    11-Б: [{day: thu, lesson: 5}]
+    11-В: [{day: mon, lesson: 5}]
+
+# Календарне планування: паралель -> згенерований YAML.
+# Класи однієї паралелі йдуть за спільним плануванням, кожен у своєму темпі.
+# Файли створює команда `nzua import-planning`.
+planning:
+  Фізика:
+    "8": planning/physics-8.yaml
+    "9": planning/physics-9.yaml
+    "10": planning/physics-10.yaml
+    "11": planning/physics-11.yaml
+  Астрономія:
+    "11": planning/astronomy-11.yaml
+
+# Зібрані домашні завдання: паралель -> файл «номер уроку, тема, ДЗ».
+# Заповнює команда `nzua dump-homework`, читає `nzua fill-topics`.
+homework:
+  Фізика:
+    "8": homework/physics-8.yaml
+    "9": homework/physics-9.yaml
+    "10": homework/physics-10.yaml
+    "11": homework/physics-11.yaml
+  Астрономія:
+    "11": homework/astronomy-11.yaml

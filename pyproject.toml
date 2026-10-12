@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nzua"
+version = "0.1.0"
+description = "Автоматичне створення стовпчиків уроків у журналі nz.ua"
+requires-python = ">=3.10"
+dependencies = [
+    "playwright>=1.49",
+    "python-dotenv>=1.0",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+nzua = "nzua.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

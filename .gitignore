@@ -1,0 +1,17 @@
+.env
+storage_state.json
+recon/
+homework/
+planning/
+*.docx
+run-*.log
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.browser-profile/
+.browser-profile-cdp/
