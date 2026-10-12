@@ -18,7 +18,6 @@ the nz.ua login survive between runs.
 
 from __future__ import annotations
 
-import os
 import subprocess
 import time
 import urllib.request
@@ -26,7 +25,6 @@ from contextlib import contextmanager
 from pathlib import Path
 from typing import Iterator
 
-from dotenv import load_dotenv
 from playwright.sync_api import BrowserContext, Page, sync_playwright
 
 BASE_URL = "https://nz.ua"
@@ -50,12 +48,6 @@ _LAUNCH_ARGS = [
     "--disable-blink-features=AutomationControlled",
     "--start-maximized",
 ]
-
-
-def credentials() -> tuple[str, str]:
-    """Read NZ_LOGIN / NZ_PASSWORD from .env. Empty strings mean manual login."""
-    load_dotenv(PROJECT_ROOT / ".env")
-    return os.getenv("NZ_LOGIN", ""), os.getenv("NZ_PASSWORD", "")
 
 
 def chrome_executable() -> Path:

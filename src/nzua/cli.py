@@ -386,7 +386,6 @@ HELP_EPILOG = """\
   schedule.yaml     розклад, і де лежать планування та ДЗ
   planning/*.yaml   теми уроків за паралелями
   homework/*.yaml   домашні завдання за паралелями
-  .env              NZ_LOGIN і NZ_PASSWORD
 
 Приклади
   python -m nzua add-columns --month 2026-09 --dry-run

@@ -15,13 +15,13 @@
 ```bash
 pip install -e .          # ставить пакет nzua разом із залежностями
 python -m playwright install chromium
-cp .env.example .env      # і вписати туди NZ_LOGIN та NZ_PASSWORD
 ```
 
 Без `pip install -e .` команда `python -m nzua` не побачить пакет: код лежить
 у `src/`, а не в корені.
 
-`.env` і збережена сесія `storage_state.json` у git не потрапляють.
+Вхід на сайт зберігається в профілі браузера (`.browser-profile*`), логін і пароль
+ніде не записуються. Профіль у git не потрапляє.
 
 ## Використання
 

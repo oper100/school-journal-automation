@@ -97,7 +97,6 @@ lines as features landed, into per-command modules earlier.
 ```bash
 pip install -e .
 python -m playwright install chromium
-cp .env.example .env            # optional: NZ_LOGIN / NZ_PASSWORD
 
 python -m nzua --help           # full guide, in Ukrainian
 python -m nzua add-columns --month 2026-09 --dry-run
